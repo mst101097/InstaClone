@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 USER_name = singh_mohit
 Password = admin
-
+Email: rohit@gmail.com
+Full name: rohit
+password = 12345
 
 """
 
