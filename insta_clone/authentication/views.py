@@ -1,4 +1,5 @@
 from django import forms
+from django.http import request
 from django.http.response import HttpResponse
 from django.shortcuts import redirect, render
 from django.views.generic import View
@@ -20,7 +21,31 @@ class SignUpView(View):
         if form.is_valid():
             form.save()
             return HttpResponse('form Save')
+        
+        context = {'form':form}
+
+        return render(request,self.template_name,context)
+
+class SignInView(View):
+    template_name = 'authentication/signin.html'
+
+    def get(self,request,*args,**kwargs):
+        return render(request,self.template_name)
+    
+    def post(self,request,*args,**kwargs):
+        
+
+
+        
+
 
         return render(request,self.template_name)
+    
+
+
+
+
+
+    
 
 
